@@ -213,3 +213,19 @@
 2021-06-13 00:42:24:4224 [32minfo[39m: [32m🚀 Server Started on 5000[39m
 2021-06-13 00:42:24:4224 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
 2021-06-13 00:42:34:4234 [32minfo[39m: [32m{ validPassword: Symbol(VALID) }[39m
+2021-06-13 00:49:02:492 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:49:02:492 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 00:52:42:5242 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:52:42:5242 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 00:52:44:5244 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:52:44:5244 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 00:53:30:5330 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:53:30:5330 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 00:53:34:5334 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:53:34:5334 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 00:53:46:5346 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 00:53:46:5346 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 01:06:26:626 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-13 01:06:26:626 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-13 01:06:43:643 [35mhttp[39m: [35mPOST /api/auth/secret 404 57 - - ms[39m
+[35m[39m

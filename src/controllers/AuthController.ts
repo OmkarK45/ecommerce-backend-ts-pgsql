@@ -107,3 +107,14 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 		})
 	}
 }
+
+export const Logout: RequestHandler = async (req, res, next) => {
+	req.session.destroy((err) => {
+		if (err) {
+			return res.status(400).json({
+				msg: 'There was a problem logging out.',
+			})
+		}
+		res.json({ msg: 'Log out successful' })
+	})
+}
