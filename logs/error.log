@@ -33,3 +33,11 @@
 [31m    at createError (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\yup\lib\util\createValidation.js:54:21)[39m
 [31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\yup\lib\util\createValidation.js:72:107[39m
 [31m    at processTicksAndRejections (node:internal/process/task_queues:94:5)[39m
+2021-06-13 00:41:37:4137 [31merror[39m: [31m❎ unhandledRejection : Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client [39m
+[31m ErrorStack : Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client[39m
+[31m    at new NodeError (node:internal/errors:329:5)[39m
+[31m    at ServerResponse.setHeader (node:_http_outgoing:579:11)[39m
+[31m    at ServerResponse.header (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:771:10)[39m
+[31m    at ServerResponse.send (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:170:12)[39m
+[31m    at ServerResponse.json (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:267:15)[39m
+[31m    at SignIn (C:\Users\omkar\Documents\GitHub\ecommerce-backend\src\controllers\AuthController.ts:104:19)[39m

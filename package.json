@@ -12,7 +12,6 @@
 	"dependencies": {
 		"@prisma/client": "^2.24.1",
 		"@quixo3/prisma-session-store": "^3.0.1",
-		"@types/secure-password": "^3.1.0",
 		"cors": "^2.8.5",
 		"cross-env": "^7.0.3",
 		"csurf": "^1.11.0",
@@ -30,6 +29,7 @@
 		"@types/express-session": "^1.17.3",
 		"@types/morgan": "^1.9.2",
 		"@types/node": "^15.12.2",
+		"@types/secure-password": "^3.1.0",
 		"prisma": "^2.24.1",
 		"ts-node": "^10.0.0",
 		"ts-node-dev": "^1.1.6",

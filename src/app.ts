@@ -3,10 +3,18 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import morganMiddleware from './lib/morgan'
 import log from './lib/logger'
-import { corsOptions } from './config/corsOptions'
 import expressSession from 'express-session'
+import { corsOptions } from './config/corsOptions'
 import { PrismaSessionStore } from '@quixo3/prisma-session-store'
 import { prisma } from './config/prisma'
+import { User } from '@prisma/client'
+
+declare module 'express-session' {
+	interface SessionData {
+		user?: Omit<User, 'hashedPassword'>
+		cookie: Cookie
+	}
+}
 
 dotenv.config()
 
@@ -18,6 +26,7 @@ app.use(
 	expressSession({
 		cookie: {
 			httpOnly: true,
+			// make this rely on env thing.
 			maxAge: 7 * 24 * 60 * 60 * 1000,
 			secure: process.env.NODE_ENV === 'production' ? true : false,
 		},
