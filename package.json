@@ -1,0 +1,31 @@
+{
+	"name": "ecommerce-backend",
+	"version": "1.0.0",
+	"description": "Backend for E Commerce Application with PGSQL, Typescript, Express and Prisma",
+	"main": "index.js",
+	"author": "Omkar Kulkarni",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development ts-node-dev src/app.ts"
+	},
+	"dependencies": {
+		"@prisma/client": "^2.24.1",
+		"cors": "^2.8.5",
+		"cross-env": "^7.0.3",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"morgan": "^1.10.0",
+		"winston": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.10",
+		"@types/express": "^4.17.12",
+		"@types/morgan": "^1.9.2",
+		"@types/node": "^15.12.2",
+		"prisma": "^2.24.1",
+		"ts-node": "^10.0.0",
+		"ts-node-dev": "^1.1.6",
+		"typescript": "^4.3.2"
+	}
+}
