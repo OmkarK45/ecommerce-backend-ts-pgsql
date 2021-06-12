@@ -102,3 +102,50 @@
 2021-06-12 19:17:32:1732 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
 2021-06-12 19:53:24:5324 [32minfo[39m: [32m🚀 Server Started on 5000[39m
 2021-06-12 19:53:24:5324 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 20:12:56:1256 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 20:12:56:1256 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 20:39:45:3945 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 20:39:45:3945 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:02:30:230 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:02:30:230 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:03:51:351 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:03:51:351 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:04:19:419 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:04:19:419 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:27:47:2747 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:27:47:2747 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:52:40:5240 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:52:40:5240 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 21:54:44:5444 [35mhttp[39m: [35mGET /api/auth/sign-up 404 57 - - ms[39m
+[35m[39m
+2021-06-12 21:58:06:586 [31merror[39m: [31m❎ unhandledRejection : ValidationError: email must be a valid email [39m
+[31m ErrorStack : ValidationError: email must be a valid email[39m
+[31m    at createError (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\yup\lib\util\createValidation.js:54:21)[39m
+[31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\yup\lib\util\createValidation.js:72:107[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:94:5)[39m
+2021-06-12 21:59:38:5938 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 21:59:38:5938 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:00:04:04 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:00:04:04 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:00:32:032 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:00:32:032 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:02:48:248 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:02:48:248 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:03:33:333 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:03:33:333 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:04:15:415 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:04:15:415 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:04:26:426 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:04:26:426 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:13:53:1353 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:13:53:1353 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:14:51:1451 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:14:51:1451 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:15:07:157 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:15:07:157 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:15:12:1512 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:15:12:1512 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:15:24:1524 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:15:24:1524 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 22:15:35:1535 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 22:15:35:1535 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
