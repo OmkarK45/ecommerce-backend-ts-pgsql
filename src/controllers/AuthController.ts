@@ -109,12 +109,27 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 }
 
 export const Logout: RequestHandler = async (req, res, next) => {
-	req.session.destroy((err) => {
-		if (err) {
-			return res.status(400).json({
-				msg: 'There was a problem logging out.',
-			})
-		}
+	try {
+		req.session.destroy((err) => {
+			if (err) {
+				log.error(err)
+				return res.status(400).json({
+					msg: 'There was a problem logging out.',
+				})
+			}
+		})
 		res.json({ msg: 'Log out successful' })
+		// this catch is only to suppress prisma warning. Actual intention is to destroy user session
+	} catch (error) {
+		res.status(200).json({
+			msg: 'Logged out successfully !',
+		})
+	}
+}
+
+export const UserInfo: RequestHandler = async (req, res, next) => {
+	const { user } = req.session
+	res.status(200).json({
+		user,
 	})
 }
