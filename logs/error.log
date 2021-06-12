@@ -1,0 +1,30 @@
+2021-06-12 18:27:20:2720 [31merror[39m: [31m❎ unhandledRejection : Error: [39m
+[31mInvalid `prisma.session.findMany()` invocation:[39m
+
+
+[31m  The table `public.Session` does not exist in the current database. [39m
+[31m ErrorStack : Error: [39m
+[31mInvalid `prisma.session.findMany()` invocation:[39m
+
+
+[31m  The table `public.Session` does not exist in the current database.[39m
+[31m    at cb (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@prisma\client\runtime\index.js:35223:17)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:94:5)[39m
+2021-06-12 18:56:17:5617 [31merror[39m: [31m❎ uncaughtException :  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client[39m
+[31m    at new NodeError (node:internal/errors:329:5)[39m
+[31m    at ServerResponse.setHeader (node:_http_outgoing:579:11)[39m
+[31m    at ServerResponse.header (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:771:10)[39m
+[31m    at ServerResponse.send (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:170:12)[39m
+[31m    at ServerResponse.json (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:267:15)[39m
+[31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\src\app.ts:58:7[39m
+[31m    at Immediate._onImmediate (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@quixo3\prisma-session-store\dist\lib\utils\defer.js:16:18)[39m
+[31m    at processImmediate (node:internal/timers:464:21)[39m
+2021-06-12 18:59:30:5930 [31merror[39m: [31m❎ uncaughtException :  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client[39m
+[31m    at new NodeError (node:internal/errors:329:5)[39m
+[31m    at ServerResponse.setHeader (node:_http_outgoing:579:11)[39m
+[31m    at ServerResponse.header (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:771:10)[39m
+[31m    at ServerResponse.send (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:170:12)[39m
+[31m    at ServerResponse.json (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:267:15)[39m
+[31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\src\app.ts:58:7[39m
+[31m    at Immediate._onImmediate (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@quixo3\prisma-session-store\dist\lib\utils\defer.js:16:18)[39m
+[31m    at processImmediate (node:internal/timers:464:21)[39m

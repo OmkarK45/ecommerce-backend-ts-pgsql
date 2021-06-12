@@ -26,3 +26,79 @@
 2021-06-12 17:10:01:101 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
 2021-06-12 17:10:49:1049 [35mhttp[39m: [35mGET / 404 57 - - ms[39m
 [35m[39m
+2021-06-12 17:45:21:4521 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 17:45:21:4521 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 17:45:27:4527 [35mhttp[39m: [35mGET / 404 57 - - ms[39m
+[35m[39m
+2021-06-12 18:08:46:846 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:08:46:846 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:09:13:913 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:09:13:913 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:24:58:2458 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:24:58:2458 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:25:20:2520 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:25:20:2520 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:27:20:2720 [31merror[39m: [31m❎ unhandledRejection : Error: [39m
+[31mInvalid `prisma.session.findMany()` invocation:[39m
+
+
+[31m  The table `public.Session` does not exist in the current database. [39m
+[31m ErrorStack : Error: [39m
+[31mInvalid `prisma.session.findMany()` invocation:[39m
+
+
+[31m  The table `public.Session` does not exist in the current database.[39m
+[31m    at cb (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@prisma\client\runtime\index.js:35223:17)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:94:5)[39m
+2021-06-12 18:27:40:2740 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:27:40:2740 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:29:06:296 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:29:06:296 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:30:35:3035 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:30:35:3035 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:34:26:3426 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:34:26:3426 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:34:47:3447 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:34:47:3447 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:42:27:4227 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:42:27:4227 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:42:30:4230 [35mhttp[39m: [35mGET / 404 57 - - ms[39m
+[35m[39m
+2021-06-12 18:42:52:4252 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:42:52:4252 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:43:14:4314 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:43:14:4314 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:43:31:4331 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:43:31:4331 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:49:43:4943 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:49:43:4943 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:56:09:569 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:56:09:569 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 18:56:17:5617 [31merror[39m: [31m❎ uncaughtException :  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client[39m
+[31m    at new NodeError (node:internal/errors:329:5)[39m
+[31m    at ServerResponse.setHeader (node:_http_outgoing:579:11)[39m
+[31m    at ServerResponse.header (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:771:10)[39m
+[31m    at ServerResponse.send (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:170:12)[39m
+[31m    at ServerResponse.json (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:267:15)[39m
+[31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\src\app.ts:58:7[39m
+[31m    at Immediate._onImmediate (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@quixo3\prisma-session-store\dist\lib\utils\defer.js:16:18)[39m
+[31m    at processImmediate (node:internal/timers:464:21)[39m
+2021-06-12 18:59:30:5930 [31merror[39m: [31m❎ uncaughtException :  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client[39m
+[31m    at new NodeError (node:internal/errors:329:5)[39m
+[31m    at ServerResponse.setHeader (node:_http_outgoing:579:11)[39m
+[31m    at ServerResponse.header (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:771:10)[39m
+[31m    at ServerResponse.send (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:170:12)[39m
+[31m    at ServerResponse.json (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\express\lib\response.js:267:15)[39m
+[31m    at C:\Users\omkar\Documents\GitHub\ecommerce-backend\src\app.ts:58:7[39m
+[31m    at Immediate._onImmediate (C:\Users\omkar\Documents\GitHub\ecommerce-backend\node_modules\@quixo3\prisma-session-store\dist\lib\utils\defer.js:16:18)[39m
+[31m    at processImmediate (node:internal/timers:464:21)[39m
+2021-06-12 18:59:55:5955 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 18:59:55:5955 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 19:00:06:06 [35mhttp[39m: [35mGET / 404 57 - - ms[39m
+[35m[39m
+2021-06-12 19:15:29:1529 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 19:15:29:1529 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 19:17:32:1732 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 19:17:32:1732 [32minfo[39m: [32mVisit -> http://localhost:5000[39m
+2021-06-12 19:53:24:5324 [32minfo[39m: [32m🚀 Server Started on 5000[39m
+2021-06-12 19:53:24:5324 [32minfo[39m: [32mVisit -> http://localhost:5000[39m

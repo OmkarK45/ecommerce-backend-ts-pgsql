@@ -4,11 +4,33 @@ import dotenv from 'dotenv'
 import morganMiddleware from './lib/morgan'
 import log from './lib/logger'
 import { corsOptions } from './config/corsOptions'
+import expressSession from 'express-session'
+import { PrismaSessionStore } from '@quixo3/prisma-session-store'
+import { prisma } from './config/prisma'
+
 dotenv.config()
 
 const app: Application = express()
 
 app.use(express.json())
+
+app.use(
+	expressSession({
+		cookie: {
+			httpOnly: true,
+			maxAge: 7 * 24 * 60 * 60 * 1000,
+			secure: process.env.NODE_ENV === 'production' ? true : false,
+		},
+		secret: process.env.SESSION_SECRET!,
+		store: new PrismaSessionStore(prisma, {
+			checkPeriod: 2 * 60 * 1000, //ms
+			dbRecordIdIsSessionId: true,
+			dbRecordIdFunction: undefined,
+		}),
+		resave: false,
+		saveUninitialized: false,
+	})
+)
 
 app.use(cors(corsOptions))
 
