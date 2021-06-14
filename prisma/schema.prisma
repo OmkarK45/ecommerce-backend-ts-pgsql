@@ -10,12 +10,18 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Remove this later
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
 model User {
-  id             String @id @default(uuid())
+  id             String    @id @default(uuid())
   firstName      String
   lastName       String
-  email          String @unique
+  email          String    @unique
   hashedPassword Bytes
+  Wishlist       Wishlist?
 }
 
 model Session {
@@ -23,4 +29,35 @@ model Session {
   sid       String   @unique
   data      String
   expiresAt DateTime
+}
+
+// @Future : Add department model as well.
+model Product {
+  id                 String    @id @default(uuid())
+  name               String
+  price              Decimal
+  productDescription String
+  image              String
+  brand              String
+  expressDelivery    Boolean
+  inStock            Boolean
+  offers             Offer[]   @relation
+  reviewCount        Int?
+  color              String?
+  Wishlist           Wishlist? @relation(fields: [wishlistId], references: [id])
+  wishlistId         String?
+}
+
+model Offer {
+  id        String   @id @default(uuid())
+  offer     String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId String?
+}
+
+model Wishlist {
+  id       String    @id @default(uuid())
+  products Product[]
+  user     User      @relation(fields: [userId], references: [id])
+  userId   String
 }

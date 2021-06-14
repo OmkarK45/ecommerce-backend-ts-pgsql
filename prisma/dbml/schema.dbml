@@ -1,0 +1,55 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table User {
+  id String [pk]
+  firstName String [not null]
+  lastName String [not null]
+  email String [unique, not null]
+  hashedPassword Bytes [not null]
+  Wishlist Wishlist
+}
+
+Table Session {
+  id String [pk]
+  sid String [unique, not null]
+  data String [not null]
+  expiresAt DateTime [not null]
+}
+
+Table Product {
+  id String [pk]
+  name String [not null]
+  price Decimal [not null]
+  productDescription String [not null]
+  image String [not null]
+  brand String [not null]
+  expressDelivery Boolean [not null]
+  inStock Boolean [not null]
+  offers Offer [not null]
+  reviewCount Int
+  color String
+  Wishlist Wishlist
+  wishlistId String
+}
+
+Table Offer {
+  id String [pk]
+  offer String [not null]
+  Product Product
+  productId String
+}
+
+Table Wishlist {
+  id String [pk]
+  products Product [not null]
+  user User [not null]
+  userId String [not null]
+}
+
+Ref: Product.wishlistId > Wishlist.id
+
+Ref: Offer.productId > Product.id
+
+Ref: Wishlist.userId - User.id
