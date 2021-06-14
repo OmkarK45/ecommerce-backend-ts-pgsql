@@ -16,12 +16,12 @@ generator dbml {
 }
 
 model User {
-  id             String    @id @default(uuid())
+  id             String     @id @default(uuid())
   firstName      String
   lastName       String
-  email          String    @unique
+  email          String     @unique
   hashedPassword Bytes
-  Wishlist       Wishlist?
+  Wishlist       Wishlist[]
 }
 
 model Session {
@@ -33,7 +33,7 @@ model Session {
 
 // @Future : Add department model as well.
 model Product {
-  id                 String    @id @default(uuid())
+  id                 String     @id @default(uuid())
   name               String
   price              Decimal
   productDescription String
@@ -41,11 +41,10 @@ model Product {
   brand              String
   expressDelivery    Boolean
   inStock            Boolean
-  offers             Offer[]   @relation
+  offers             Offer[]
   reviewCount        Int?
   color              String?
-  Wishlist           Wishlist? @relation(fields: [wishlistId], references: [id])
-  wishlistId         String?
+  wishlist           Wishlist[]
 }
 
 model Offer {
@@ -57,7 +56,7 @@ model Offer {
 
 model Wishlist {
   id       String    @id @default(uuid())
-  products Product[]
   user     User      @relation(fields: [userId], references: [id])
   userId   String
+  products Product[]
 }

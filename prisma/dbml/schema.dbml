@@ -8,7 +8,7 @@ Table User {
   lastName String [not null]
   email String [unique, not null]
   hashedPassword Bytes [not null]
-  Wishlist Wishlist
+  Wishlist Wishlist [not null]
 }
 
 Table Session {
@@ -30,8 +30,7 @@ Table Product {
   offers Offer [not null]
   reviewCount Int
   color String
-  Wishlist Wishlist
-  wishlistId String
+  wishlist Wishlist [not null]
 }
 
 Table Offer {
@@ -43,13 +42,16 @@ Table Offer {
 
 Table Wishlist {
   id String [pk]
-  products Product [not null]
   user User [not null]
   userId String [not null]
+  products Product [not null]
 }
 
-Ref: Product.wishlistId > Wishlist.id
+Table ProductToWishlist {
+  wishlistId String [ref: > Wishlist.id]
+  productsId String [ref: > Product.id]
+}
 
 Ref: Offer.productId > Product.id
 
-Ref: Wishlist.userId - User.id
+Ref: Wishlist.userId > User.id
