@@ -8,7 +8,7 @@ Table User {
   lastName String [not null]
   email String [unique, not null]
   hashedPassword Bytes [not null]
-  Wishlist Wishlist [not null]
+  Wishlist Wishlist
 }
 
 Table Session {
@@ -54,4 +54,4 @@ Table ProductToWishlist {
 
 Ref: Offer.productId > Product.id
 
-Ref: Wishlist.userId > User.id
+Ref: Wishlist.userId - User.id

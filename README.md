@@ -16,3 +16,9 @@ Modelling DB
 
 - A user can have only one wishlist
 - A wishlist can have multiple products
+
+Routes config
+
+- [x]- api/products/all-products - Returns a JSON of all products
+- [x]- api/products/sdjk23-asdlfj3-32sdsadj-3243n - Returns a specific product
+- api/products?category=electronics - Retuns electronic products

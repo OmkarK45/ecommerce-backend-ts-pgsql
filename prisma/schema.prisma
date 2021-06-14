@@ -16,12 +16,13 @@ generator dbml {
 }
 
 model User {
-  id             String     @id @default(uuid())
+  id             String @id @default(uuid())
   firstName      String
   lastName       String
-  email          String     @unique
+  email          String @unique
   hashedPassword Bytes
-  Wishlist       Wishlist[]
+
+  Wishlist Wishlist?
 }
 
 model Session {
