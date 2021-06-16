@@ -1,12 +1,12 @@
 import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import morganMiddleware from './lib/morgan'
-import log from './lib/logger'
+import morganMiddleware from './utils/morgan'
+import log from './utils/logger'
 import expressSession from 'express-session'
 import { corsOptions } from './config/corsOptions'
 import { PrismaSessionStore } from '@quixo3/prisma-session-store'
-import { prisma } from './config/prisma'
+import { prisma } from './db/prisma'
 import { User } from '@prisma/client'
 
 declare module 'express-session' {

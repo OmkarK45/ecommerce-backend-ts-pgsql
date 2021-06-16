@@ -1,9 +1,9 @@
-import { prisma } from '../config/prisma'
+import { prisma } from '../db/prisma'
 import { RequestHandler } from 'express'
 import { hashPassword, verifyPassword } from '../utils/util'
 import { SignInInput, SignUpInput } from '../validation'
 import type { Asserts } from 'yup'
-import log from '../lib/logger'
+import log from '../utils/logger'
 import SecurePassword from 'secure-password'
 
 interface SignUpInput extends Asserts<typeof SignUpInput> {}
@@ -34,11 +34,18 @@ export const SignUp: RequestHandler = async (req, res, next) => {
 			},
 		})
 
+		// const userWishlist = await prisma.wishlist.create({
+		// 	data: {
+		// 		userId: savedUser.id,
+		// 	},
+		// })
+
 		const userInfo = {
 			email: savedUser.email,
 			lastName: savedUser.lastName,
 			id: savedUser.id,
 			firstName: savedUser.firstName,
+			// userWishlist,
 		}
 
 		req.session.user = userInfo

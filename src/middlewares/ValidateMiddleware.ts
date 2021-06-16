@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express'
 import { BaseSchema } from 'yup'
 import { MixedSchema } from 'yup/lib/mixed'
+import log from '../utils/logger'
 
 export const validate =
 	(schema: MixedSchema | BaseSchema) =>

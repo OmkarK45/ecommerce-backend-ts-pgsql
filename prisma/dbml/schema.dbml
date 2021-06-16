@@ -2,15 +2,6 @@
 //// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 //// ------------------------------------------------------
 
-Table User {
-  id String [pk]
-  firstName String [not null]
-  lastName String [not null]
-  email String [unique, not null]
-  hashedPassword Bytes [not null]
-  Wishlist Wishlist
-}
-
 Table Session {
   id String [pk]
   sid String [unique, not null]
@@ -18,40 +9,31 @@ Table Session {
   expiresAt DateTime [not null]
 }
 
+Table User {
+  id String [pk]
+  firstName String [not null]
+  lastName String [not null]
+  email String [unique, not null]
+  hashedPassword Bytes [not null]
+  wishlist Wishlist
+}
+
 Table Product {
   id String [pk]
   name String [not null]
-  price Decimal [not null]
-  productDescription String [not null]
-  image String [not null]
-  brand String [not null]
-  expressDelivery Boolean [not null]
-  inStock Boolean [not null]
-  offers Offer [not null]
-  reviewCount Int
-  color String
-  wishlist Wishlist [not null]
-}
-
-Table Offer {
-  id String [pk]
-  offer String [not null]
-  Product Product
-  productId String
+  wishlists Wishlist [not null]
 }
 
 Table Wishlist {
   id String [pk]
+  products Product [not null]
   user User [not null]
   userId String [not null]
-  products Product [not null]
 }
 
 Table ProductToWishlist {
-  wishlistId String [ref: > Wishlist.id]
+  wishlistsId String [ref: > Wishlist.id]
   productsId String [ref: > Product.id]
 }
-
-Ref: Offer.productId > Product.id
 
 Ref: Wishlist.userId - User.id

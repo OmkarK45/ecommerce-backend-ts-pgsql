@@ -1,4 +1,4 @@
-import { prisma } from '../config/prisma'
+import { prisma } from '../db/prisma'
 import { RequestHandler } from 'express'
 
 export const GetAllProducts: RequestHandler = async (req, res, next) => {

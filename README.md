@@ -20,5 +20,13 @@ Modelling DB
 Routes config
 
 - [x]- api/products/all-products - Returns a JSON of all products
-- [x]- api/products/sdjk23-asdlfj3-32sdsadj-3243n - Returns a specific product
-- api/products?category=electronics - Retuns electronic products
+- [x]- api/products/835c6ee4-1e43-4d05-8d46-193087d66731 - Returns a specific product
+- [] - api/products?category=electronics - Retuns electronic products
+
+For wishlists thing.
+
+- [x] - api/wishlist/
+- [] - api/wishlist/add-product
+- [] - api/wishlist/remove-product
+
+I need to think if I need to create wishlist and cart for the user as well.

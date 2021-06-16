@@ -10,7 +10,7 @@
 		"dev": "cross-env NODE_ENV=development ts-node-dev src/app.ts"
 	},
 	"dependencies": {
-		"@prisma/client": "^2.24.1",
+		"@prisma/client": "^2.25.0",
 		"@quixo3/prisma-session-store": "^3.0.1",
 		"cors": "^2.8.5",
 		"cross-env": "^7.0.3",
@@ -30,7 +30,7 @@
 		"@types/morgan": "^1.9.2",
 		"@types/node": "^15.12.2",
 		"@types/secure-password": "^3.1.0",
-		"prisma": "^2.24.1",
+		"prisma": "^2.25.0",
 		"prisma-dbml-generator": "^0.6.0",
 		"ts-node": "^10.0.0",
 		"ts-node-dev": "^1.1.6",

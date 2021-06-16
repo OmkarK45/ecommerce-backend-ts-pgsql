@@ -17,3 +17,8 @@ export const SignInInput = yup.object({
 	email: yup.string().email().required(),
 	password: yup.string().required(),
 })
+
+export const AddToWishlistInput = yup.object({
+	productId: yup.string().required(),
+	wishlistId: yup.string().required(),
+})
