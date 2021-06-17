@@ -31,21 +31,21 @@ export const SignUp: RequestHandler = async (req, res, next) => {
 				hashedPassword: await hashPassword(req.body.password),
 				lastName,
 				firstName,
+				Wishlist: {
+					create: {},
+				},
+			},
+			include: {
+				Wishlist: true,
 			},
 		})
-
-		// const userWishlist = await prisma.wishlist.create({
-		// 	data: {
-		// 		userId: savedUser.id,
-		// 	},
-		// })
 
 		const userInfo = {
 			email: savedUser.email,
 			lastName: savedUser.lastName,
 			id: savedUser.id,
 			firstName: savedUser.firstName,
-			// userWishlist,
+			wishlist: savedUser.Wishlist,
 		}
 
 		req.session.user = userInfo

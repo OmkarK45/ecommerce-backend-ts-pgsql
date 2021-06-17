@@ -45,6 +45,7 @@ app.use(cors(corsOptions))
 
 app.use('/api/auth', require('./routes/AuthRoutes'))
 app.use('/api/products', require('./routes/ProductRoutes'))
+app.use('/api/wishlist', require('./routes/WishlistRoutes'))
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 	if (process.env.NODE_ENV === 'development') {
