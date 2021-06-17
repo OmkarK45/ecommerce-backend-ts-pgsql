@@ -1,6 +1,35 @@
 import { RequestHandler } from 'express'
 import { prisma } from '../db/prisma'
 
+export const GetWishlist: RequestHandler = async (req, res) => {
+	const { user } = req.session
+
+	try {
+		const userWishlist = await prisma.user.findUnique({
+			where: {
+				email: user?.email,
+			},
+			select: {
+				Wishlist: {
+					select: {
+						products: true,
+					},
+				},
+			},
+		})
+
+		res.status(200).json({
+			msg: "Here's your wishlist.",
+			userWishlist,
+		})
+	} catch (error) {
+		res.status(500).json({
+			msg: 'Something went wrong',
+			code: 'ERROR_INTERNAL_ERROR',
+		})
+	}
+}
+
 // Todo -> verify and typecheck for the body
 interface AddProductToWishlistInput {
 	productId: string

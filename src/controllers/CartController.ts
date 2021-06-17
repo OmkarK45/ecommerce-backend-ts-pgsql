@@ -1,6 +1,35 @@
 import { prisma } from '../db/prisma'
 import { RequestHandler } from 'express'
 
+export const GetCart: RequestHandler = async (req, res) => {
+	const { user } = req.session
+
+	try {
+		const userCart = await prisma.user.findUnique({
+			where: {
+				email: user?.email,
+			},
+			select: {
+				Cart: {
+					select: {
+						products: true,
+					},
+				},
+			},
+		})
+
+		res.status(200).json({
+			msg: "Here's your cart.",
+			userCart,
+		})
+	} catch (error) {
+		res.status(500).json({
+			msg: 'Something went wrong',
+			code: 'ERROR_INTERNAL_ERROR',
+		})
+	}
+}
+
 interface AddToCartInput {
 	productId: string
 }
