@@ -31,9 +31,9 @@ For wishlists thing.
 
 For cart thing
 
-- [] - api/cart
-- [] - api/cart/add-product
-- [] - api/cart/remove-product
+- [x] - api/cart
+- [x] - api/cart/add-product
+- [x] - api/cart/remove-product
 
 - Additional Controllers
 - [] - api/cart/move-to-wishlist
