@@ -34,9 +34,13 @@ export const SignUp: RequestHandler = async (req, res, next) => {
 				Wishlist: {
 					create: {},
 				},
+				Cart: {
+					create: {},
+				},
 			},
 			include: {
 				Wishlist: true,
+				Cart: true,
 			},
 		})
 
@@ -46,6 +50,7 @@ export const SignUp: RequestHandler = async (req, res, next) => {
 			id: savedUser.id,
 			firstName: savedUser.firstName,
 			wishlist: savedUser.Wishlist,
+			cart: savedUser.Cart,
 		}
 
 		req.session.user = userInfo
@@ -72,6 +77,18 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 			where: {
 				email,
 			},
+			include: {
+				Cart: {
+					include: {
+						products: true,
+					},
+				},
+				Wishlist: {
+					include: {
+						products: true,
+					},
+				},
+			},
 		})
 
 		if (!user) {
@@ -86,9 +103,9 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 
 		switch (validPassword) {
 			case SecurePassword.VALID:
-				const { email, id, firstName, lastName } = user
+				const { email, id, firstName, lastName, Cart, Wishlist } = user
 
-				const userInfo = { email, id, firstName, lastName }
+				const userInfo = { email, id, firstName, lastName, Cart, Wishlist }
 
 				req.session.user = userInfo
 

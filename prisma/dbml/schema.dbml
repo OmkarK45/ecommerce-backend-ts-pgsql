@@ -16,6 +16,7 @@ Table User {
   email String [unique, not null]
   hashedPassword Bytes [not null]
   Wishlist Wishlist
+  Cart Cart
 }
 
 Table Product {
@@ -23,9 +24,17 @@ Table Product {
   name String [not null]
   price Decimal [not null]
   wishlist Wishlist [not null]
+  cart Cart [not null]
 }
 
 Table Wishlist {
+  id String [pk]
+  user User [not null]
+  userId String [not null]
+  products Product [not null]
+}
+
+Table Cart {
   id String [pk]
   user User [not null]
   userId String [not null]
@@ -37,4 +46,11 @@ Table ProductToWishlist {
   productsId String [ref: > Product.id]
 }
 
+Table CartToProduct {
+  cartId String [ref: > Cart.id]
+  productsId String [ref: > Product.id]
+}
+
 Ref: Wishlist.userId - User.id
+
+Ref: Cart.userId - User.id
