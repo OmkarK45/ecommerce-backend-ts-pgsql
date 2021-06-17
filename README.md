@@ -26,7 +26,17 @@ Routes config
 For wishlists thing.
 
 - [x] - api/wishlist/
-- [] - api/wishlist/add-product
-- [] - api/wishlist/remove-product
+- [x] - api/wishlist/add-product
+- [x] - api/wishlist/remove-product
 
-I need to think if I need to create wishlist and cart for the user as well.
+For cart thing
+
+- [] - api/cart
+- [] - api/cart/add-product
+- [] - api/cart/remove-product
+
+- Additional Controllers
+- [] - api/cart/move-to-wishlist
+- [] - api/wishlist/move-to-cart
+
+  I need to think if I need to create wishlist and cart for the user as well.
