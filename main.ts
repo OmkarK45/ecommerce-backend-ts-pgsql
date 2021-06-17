@@ -140,3 +140,30 @@ async function addProductToUserWishlist() {
 }
 
 // addProductToUserWishlist()
+
+async function removeProductfromWishlist() {
+	const updatedWl2 = await prisma.wishlist.update({
+		where: {
+			id: '11bfdab9-4798-4e73-bf6f-42800ae8c44d',
+		},
+		data: {
+			products: {
+				disconnect: {
+					id: '115ce085-0fd7-4b8a-a5c8-49965cfb4257',
+				},
+			},
+		},
+	})
+	const updatedWl = await prisma.wishlist.findUnique({
+		where: {
+			id: '11bfdab9-4798-4e73-bf6f-42800ae8c44d',
+		},
+		include: {
+			products: true,
+		},
+	})
+	log.info(updatedWl)
+	log.info(updatedWl2)
+}
+
+removeProductfromWishlist()

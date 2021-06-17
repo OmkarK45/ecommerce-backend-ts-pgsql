@@ -1,8 +1,12 @@
 import { Router } from 'express'
-import { AddProductToWishlist } from '../controllers/WishlistController'
+import {
+	AddProductToWishlist,
+	RemoveProductFromWishlist,
+} from '../controllers/WishlistController'
 
 const router = Router()
-// change this to post
+
 router.route('/add-product').post(AddProductToWishlist)
+router.route('/remove-product').post(RemoveProductFromWishlist)
 
 export = router
