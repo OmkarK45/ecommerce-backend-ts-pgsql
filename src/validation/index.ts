@@ -22,3 +22,9 @@ export const AddToWishlistInput = yup.object({
 	productId: yup.string().required(),
 	wishlistId: yup.string().required(),
 })
+
+export const MoveToCartInput = yup.object({
+	productId: yup.string().required(),
+	wishlistId: yup.string().required(),
+	cartId: yup.string().required(),
+})

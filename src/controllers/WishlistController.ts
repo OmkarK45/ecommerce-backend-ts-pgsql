@@ -1,5 +1,7 @@
 import { RequestHandler } from 'express'
+import { Asserts } from 'yup'
 import { prisma } from '../db/prisma'
+import { MoveToCartInput } from '../validation'
 
 export const GetWishlist: RequestHandler = async (req, res) => {
 	const { user } = req.session
@@ -124,4 +126,70 @@ export const RemoveProductFromWishlist: RequestHandler = async (req, res) => {
 			code: 'ERROR_INTERNAL_ERROR',
 		})
 	}
+}
+
+interface MoveToCartInput extends Asserts<typeof MoveToCartInput> {}
+
+export const MoveToCart: RequestHandler = async (req, res) => {
+	const { user } = req.session
+
+	const { productId, cartId, wishlistId } = req.body as MoveToCartInput
+
+	// how move to cart works
+	const userCart = await prisma.cart.findUnique({
+		where: {
+			id: cartId,
+		},
+		include: {
+			products: {
+				select: {
+					id: true,
+				},
+			},
+		},
+	})
+
+	const userWishlist = await prisma.wishlist.findUnique({
+		where: {
+			id: wishlistId,
+		},
+		include: {
+			products: {
+				select: {
+					id: true,
+				},
+			},
+		},
+	})
+	// Future -> this could be better considering number of products one can have.
+
+	userCart?.products.forEach((product) => {
+		if (product.id === productId) {
+			return res.json({
+				msg: 'The product is already present in your cart.',
+			})
+		}
+	})
+
+	const updatedCart = await prisma.cart.update({
+		where: {
+			id: cartId,
+		},
+		data: {
+			products: {
+				connect: {
+					id: productId,
+				},
+			},
+		},
+		include: {
+			products: true,
+		},
+	})
+
+	res.json({
+		userCart,
+		userWishlist,
+		updatedCart,
+	})
 }
