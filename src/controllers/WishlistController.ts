@@ -187,9 +187,21 @@ export const MoveToCart: RequestHandler = async (req, res) => {
 		},
 	})
 
+	const updatedWishlist = await prisma.wishlist.update({
+		where: {
+			id: wishlistId,
+		},
+		data: {
+			products: {
+				disconnect: {
+					id: productId,
+				},
+			},
+		},
+	})
+
 	res.json({
-		userCart,
-		userWishlist,
 		updatedCart,
+		updatedWishlist,
 	})
 }
