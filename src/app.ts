@@ -3,7 +3,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import morganMiddleware from './utils/morgan'
 import log from './utils/logger'
-import expressSession from 'express-session'
+import session from 'express-session'
+import cookieParser from 'cookie-parser'
 import { corsOptions } from './config/corsOptions'
 import { PrismaSessionStore } from '@quixo3/prisma-session-store'
 import { prisma } from './db/prisma'
@@ -21,15 +22,12 @@ dotenv.config()
 const app: Application = express()
 
 app.use(express.json())
+app.use(cors(corsOptions))
+app.use(cookieParser())
 
 app.use(
-	expressSession({
-		cookie: {
-			httpOnly: true,
-			// make this rely on env thing.
-			maxAge: 7 * 24 * 60 * 60 * 1000,
-			secure: process.env.NODE_ENV === 'production' ? true : false,
-		},
+	session({
+		name: 'dogemart.cookie.v2',
 		secret: process.env.SESSION_SECRET!,
 		store: new PrismaSessionStore(prisma, {
 			checkPeriod: 2 * 60 * 1000, //ms
@@ -40,8 +38,6 @@ app.use(
 		saveUninitialized: false,
 	})
 )
-
-app.use(cors(corsOptions))
 
 app.use('/api/auth', require('./routes/AuthRoutes'))
 app.use('/api/products', require('./routes/ProductRoutes'))

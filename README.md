@@ -36,7 +36,9 @@ For cart thing
 - [x] - api/cart/remove-product
 
 - Additional Controllers
-- [] - api/cart/move-to-wishlist
-- [] - api/wishlist/move-to-cart
+- [x] - api/cart/move-to-wishlist
+- [x] - api/wishlist/move-to-cart
 
   I need to think if I need to create wishlist and cart for the user as well.
+
+- [] - Add name , image, description etc of a product in db and run migrate;

@@ -69,7 +69,7 @@ export const SignUp: RequestHandler = async (req, res, next) => {
 
 interface SignInInput extends Asserts<typeof SignInInput> {}
 
-export const SignIn: RequestHandler = async (req, res, next) => {
+export const SignIn: RequestHandler = async (req, res) => {
 	const { email, password } = req.body as SignInInput
 
 	try {
@@ -108,10 +108,11 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 				const userInfo = { email, id, firstName, lastName, Cart, Wishlist }
 
 				req.session.user = userInfo
-
+				console.log(req.cookies)
 				return res.status(200).json({
 					msg: 'Signed in successfully.',
 					userInfo,
+					headers: req.headers,
 				})
 			case SecurePassword.INVALID:
 				return res.status(400).json({
@@ -125,9 +126,11 @@ export const SignIn: RequestHandler = async (req, res, next) => {
 				})
 		}
 	} catch (error) {
+		log.error(error)
 		res.status(500).json({
 			msg: 'Something went wrong while signing you in. Please try again later.',
 			error_code: 'ERROR_INTERNAL_ERROR',
+			error,
 		})
 	}
 }
